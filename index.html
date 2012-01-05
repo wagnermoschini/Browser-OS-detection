@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="utf-8">
+        <title>Browser OS Detection</title>
+		
+		<style>
+			body{background:#666; color:#fff; font-family: arial, sans-serif;}
+			ul, li{ margin:0; padding:0; list-style:none; }
+			h1{ font-size:30px;}
+			.panel{ width:300px; display:block; }
+			pre{ padding:30px 0; background:#000; }
+		</style>
+    </head>
+    <body>
+		<h1>Browser Especification</h1>
+		
+		<div class="panel">
+			<ul>
+				<li>
+					OS: <strong id="os"></strong>
+				</li>
+				<li>
+					Engine: <strong id="engine"></strong>
+				</li>
+				<li>
+					Browser: <strong id="browser"></strong>
+				</li>
+				<li>
+					Version: <strong id="version"></strong>
+				</li>
+			</ul>
+		</div>
+		
+		<br />
+		<br />
+		<br />
+		Example of usage:
+		<pre>
+	$("html").browser();</pre>
+		<br />
+		Return classes in element
+		<pre class="returns"></pre>
+	
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	    <script src="browser.js"></script>
+		
+		<script>
+				var prop = $("html").browser(),
+					cls = $("html").attr("class");
+								
+				$("#os").html(prop.os);
+				$("#engine").html(prop.engine);
+				$("#browser").html(prop.browser);
+				$("#version").html(prop.version);
+				
+				$(".returns").html("	"+cls);
+		</script>
+    </body>
+</html>
