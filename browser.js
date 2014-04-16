@@ -35,7 +35,7 @@
 		properties.os = self.findByName(opts.plataforms);
 		properties.engine = self.findByName(opts.engines);
 		properties.browser = self.findByName(opts.browsers);
-		properties.version = useragent.match(/((msie|firefox|chrome|version)(\/| ))([0-9.]*\.?[0-9.])/)[4];
+		properties.version = useragent.match(/((msie|trident|firefox|chrome|version)(\/| ))([0-9.]*\.?[0-9.])/)[4];
 		$(self).addClass(properties.browser.replace(" ","")+" "+properties.browser.replace(" ","")+parseInt(properties.version)+" "+properties.engine+" "+properties.os);
 		
 		return properties;
@@ -62,7 +62,7 @@
 			'safari': 'Safari',
 			'fennec': 'Firefox Mobile',
 			'firefox': 'Firefox',
-			'msie': 'Msie'
+			'msie': ['Msie', 'Trident']
 		}
 	};
 	
