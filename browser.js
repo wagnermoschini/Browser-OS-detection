@@ -16,7 +16,7 @@
 				engine: '',
 				browser: '',
 				os: '',
-				version: $.browser.version
+				version: !$.browser ? '' : $.browser.version
 			};
 
 		self.findByName = function(prop) {
